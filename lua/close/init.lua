@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup()
-  local pairs = {
+  local brackets = {
     ["("] = ")",
     ["["] = "]",
     ["{"] = "}",
@@ -9,7 +9,7 @@ function M.setup()
     ["'"] = "'"
   }
 
-  for open, close in pairs(pairs) do
+  for open, close in pairs(brackets) do
     vim.keymap.set("i", open, function()
       return open .. close .. "<Left>"
     end, { expr = true, noremap = true })
