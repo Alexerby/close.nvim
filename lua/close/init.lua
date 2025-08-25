@@ -36,7 +36,7 @@ local function set_closing_jump_mappings()
     end
 end
 
--- Setup function (calls all mapping functions)
+-- Setup function
 function M.setup()
     set_autoclose_mappings()
     set_backspace_mapping()
